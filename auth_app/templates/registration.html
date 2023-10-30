@@ -1,0 +1,15 @@
+{% extends 'auth_base.html' %}
+
+{% block title %} Sign Up {% endblock %}
+
+{% block header %} <center><h1>Sign Up Below</h1></center> {% endblock %}
+
+{% block content %}
+<div>
+    <form method="post">
+        {% csrf_token %}
+            {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
+</div>
+{% endblock %}

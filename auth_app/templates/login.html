@@ -1,0 +1,23 @@
+{%extends 'auth_base.html'%}
+
+{% block title %} Login {% endblock %}
+
+{% block header %} <center><h2>Sign in</h2></center> {% endblock %}
+
+{% block content %}
+<center>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.username.label_tag }} {{ form.username }}<br/>
+            {{ form.password.label_tag }} {{ form.password }}<br/>
+            <button type="submit">Login</button>
+        </form>
+        <div>
+        <br/><br/><hr>
+        <center><h4><a href="{% url 'registration' %}" class="button">No ToDo Account? Sign up here!</a></h4></center>
+        <hr>
+    </div>
+</center>
+
+{% endblock %}

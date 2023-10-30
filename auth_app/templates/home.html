@@ -1,0 +1,15 @@
+{% extends 'auth_base.html' %}
+
+{% block title %} ToDo {% endblock %}
+
+{% block header %} <center><h2>What todo Today?</h2></center> {% endblock %}
+
+{% block content %}
+<div>
+    {% if user.is_authenticated %}
+    <center><h3>Welcome, {{ user.username }}!</h3></center>
+    {% else %}
+    <center><h3>Welcome, Guest!</h3></center>
+    {% endif %}
+</div>
+{% endblock %}
