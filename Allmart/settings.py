@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'eshop_app'
-    'auth_app'
+    'eshop_app',
+    'auth_app',
 ]
 
 
@@ -55,6 +55,13 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Allmart.urls'
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ],
+    # Other settings...
+}
 
 TEMPLATES = [
     {
