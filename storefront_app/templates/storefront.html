@@ -1,0 +1,15 @@
+{% extends 'shop_base.html' %}
+
+{% block title %} Shop {% endblock %}
+
+{% block header %} <center><h2>Products</h2></center> {% endblock %}
+
+{% block content %}
+<div>
+    {% if user.is_authenticated %}
+    <center><h3>Welcome, {{ user.username }}!</h3></center>
+    {% else %}
+    <center><h3>Welcome, Guest!</h3></center>
+    {% endif %}
+</div>
+{% endblock %}

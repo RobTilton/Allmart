@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'eshop_app',
     'auth_app',
+    'storefront_app'
 ]
 
 
