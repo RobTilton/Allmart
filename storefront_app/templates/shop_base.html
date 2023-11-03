@@ -1,22 +1,41 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>{% block title %}Your Page Title{% endblock %}</title>
-       
+
 </head>
 <body>
-
     <header>
-        <h1>{% block header %} {% endblock %}</h1>   
+        <h1>{% block header %}Tester{% endblock %}</h1>
+        <style>
+            .storefront-window {
+                position: fixed;
+                top: 10vh;
+                bottom: 0;
+                left: 15vw;
+                right: 15vw;
+                overflow-y: auto;
+                border: 1px solid #ccc;
+                padding: 10px;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+            .storefront-window::-webkit-scrollbar{
+                display: none;
+            }
+            
+            .storefront-item{
+                border: 2px solid #ccc;
+                margin: 2px;
+            }
+        </style>
     </header>
     
-    <main>   
-        {% block content %}Add Content{% endblock %}
-    </main>
-
+    <div class="storefront-window">
+        <!--content items will go here -->
+        {% block content %}{% endblock %}    
+    </div>
 </body>
 </html>
