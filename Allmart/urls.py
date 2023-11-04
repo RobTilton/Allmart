@@ -22,5 +22,6 @@ urlpatterns = [
     path('auth/', include('auth_app.urls')),
     path('shop/',include('storefront_app.urls')),
 
-    path('api/', include('eshop_app.urls')),    
+    path('api/', include('eshop_app.urls')),
+    path('api/api-auth/', include('rest_framework.urls')),    
 ]
